@@ -54,9 +54,9 @@ export default function AboutUs() {
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              TechRedy is more than just a learning platform—we&apos;re a community
-              dedicated to democratizing technology education and creating
-              pathways to successful tech careers.
+              TechRedy is more than just a learning platform—we&apos;re a
+              community dedicated to democratizing technology education and
+              creating pathways to successful tech careers.
             </p>
           </div>
         </ScrollAnimation>
@@ -76,9 +76,9 @@ export default function AboutUs() {
                     small initiative to empower aspiring technologists.
                   </p>
                   <p>
-                    Today, we&apos;ve grown into a comprehensive learning ecosystem
-                    that combines cutting-edge curriculum, personalized
-                    mentorship, and real-world project experience.
+                    Today, we&apos;ve grown into a comprehensive learning
+                    ecosystem that combines cutting-edge curriculum,
+                    personalized mentorship, and real-world project experience.
                   </p>
                   <p>
                     Our mission remains unchanged: to make quality tech
@@ -164,8 +164,8 @@ export default function AboutUs() {
             </h3>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
               Join thousands of learners who have successfully transitioned into
-              tech careers with TechRedy&apos;s comprehensive programs and supportive
-              community.
+              tech careers with TechRedy&apos;s comprehensive programs and
+              supportive community.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Badge className="bg-blue-100 text-blue-700 border-blue-200 px-4 py-2">

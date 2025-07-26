@@ -149,8 +149,9 @@ const TechRedyCourses: React.FC = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Join thousands of professionals who&apos;ve accelerated their careers
-            with our industry-focused training programs designed by experts.
+            Join thousands of professionals who&apos;ve accelerated their
+            careers with our industry-focused training programs designed by
+            experts.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">
