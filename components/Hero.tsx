@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import OptimizedImage from "@/components/ui/OptimizedImage";
+import StaticImage from "@/components/ui/StaticImage";
 import { IMAGES } from "@/lib/constants/images";
 import {
   ArrowRight,
@@ -153,7 +153,7 @@ export default function Hero() {
         >
           <div className="flex items-center justify-center mb-6">
             <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center shadow-2xl">
-              <OptimizedImage
+              <StaticImage
                 src={IMAGES.logos.techRedy}
                 alt="TechRedy Logo"
                 width={64}

@@ -1,29 +1,30 @@
 "use client";
 
-import Image, { ImageProps } from "next/image";
 import { useState } from "react";
 
-interface OptimizedImageProps extends Omit<ImageProps, "src"> {
+interface StaticImageProps {
   src: string;
   alt: string;
-  fallback?: string;
+  width?: number;
+  height?: number;
   className?: string;
+  fallback?: string;
+  priority?: boolean;
 }
 
 /**
- * Industrial standard image component with:
- * - Error handling with fallback
- * - Loading states
- * - Optimization for static exports
- * - Accessibility compliance
+ * Static image component optimized for static exports
+ * Uses regular img tag to avoid Next.js Image optimization issues
  */
-export default function OptimizedImage({
+export default function StaticImage({
   src,
   alt,
-  fallback = "/images/placeholder.svg",
+  width,
+  height,
   className = "",
-  ...props
-}: OptimizedImageProps) {
+  fallback = "/images/placeholder.svg",
+  priority = false,
+}: StaticImageProps) {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
 
@@ -41,17 +42,23 @@ export default function OptimizedImage({
   return (
     <div className={`relative ${className}`}>
       {loading && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
+        <div 
+          className="absolute inset-0 bg-gray-200 animate-pulse rounded"
+          style={{ width, height }}
+        />
       )}
-      <Image
+      <img
         src={error ? fallback : src}
         alt={alt}
+        width={width}
+        height={height}
         onError={handleError}
         onLoad={handleLoad}
         className={`${
           loading ? "opacity-0" : "opacity-100"
         } transition-opacity duration-300`}
-        {...props}
+        loading={priority ? "eager" : "lazy"}
+        style={{ maxWidth: '100%', height: 'auto' }}
       />
     </div>
   );
