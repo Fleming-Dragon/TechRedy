@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { IMAGES } from "@/lib/constants/images";
+
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     icon: [
       { url: "/favicon.ico" },
       {
-        url: IMAGES.logos.techRedy,
+        url: "../public/techredylogo.png",
         sizes: "16x16",
         type: "image/png",
       },
