@@ -16,7 +16,7 @@ import {
 import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 
-export default function Hero() {
+export function Hero() {
   const [displayText, setDisplayText] = useState("");
   const [isTypingComplete, setIsTypingComplete] = useState(false);
   const [counts, setCounts] = useState({
@@ -152,14 +152,12 @@ export default function Hero() {
         >
           <div className="flex items-center justify-center mb-6">
             <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center shadow-2xl">
-              <img
+              <Image
                 src="/techredylogo.png"
                 alt="TechRedy Logo"
                 width={64}
                 height={64}
                 className="object-contain"
-                loading="eager"
-                style={{ maxWidth: "100%", height: "auto" }}
               />
             </div>
           </div>
