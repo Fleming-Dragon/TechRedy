@@ -14,13 +14,23 @@ export const metadata: Metadata = {
   authors: [{ name: "TechRedy Team" }],
   icons: {
     icon: [
-      { url: "/favicon.ico" },
+      {
+        url: "/techredylogo.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
       {
         url: "/techredylogo.png",
         sizes: "16x16",
         type: "image/png",
       },
     ],
+    shortcut: "/techredylogo.png",
+    apple: {
+      url: "/techredylogo.png",
+      sizes: "180x180",
+      type: "image/png",
+    },
   },
   openGraph: {
     title: "TechRedy - Empowering Future Technologists",
