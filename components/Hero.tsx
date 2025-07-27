@@ -143,6 +143,20 @@ export function Hero() {
           </Badge>
         </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="flex justify-center gap-4 mb-6"
+        >
+          <Image
+            src="/techredylogo.png" // Path relative to the public folder
+            alt="Image 1"
+            width={75} // Adjust width
+            height={75} // Adjust height
+            className=" object-cover"
+          />
+        </motion.div>
         {/* Logo and Main Title */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -150,18 +164,6 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-8"
         >
-          <div className="flex items-center justify-center mb-6">
-            <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center shadow-2xl">
-              <Image
-                src="/techredylogo.png"
-                alt="TechRedy Logo"
-                width={64}
-                height={64}
-                className="object-contain"
-              />
-            </div>
-          </div>
-
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-4">
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               {displayText}
