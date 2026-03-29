@@ -15,10 +15,7 @@ export default function CallToAction() {
             <div className="mb-16">
               <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
                 Ready to Transform Your
-                <span className="text-[#F09526]">
-                  {" "}
-                  Tech Career?
-                </span>
+                <span className="text-[#F09526]"> Tech Career?</span>
               </h2>
               <p className="text-xl md:text-2xl text-[#3665AA] max-w-4xl mx-auto mb-12">
                 Join thousands of successful technologists who started their
@@ -48,7 +45,12 @@ export default function CallToAction() {
             </div>
 
             {/* Stats Cards */}
-            <ScrollAnimation direction="up" duration={0.8} delay={0.4} stagger={0.2}>
+            <ScrollAnimation
+              direction="up"
+              duration={0.8}
+              delay={0.4}
+              stagger={0.2}
+            >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <Card className="border border-gray-200 hover:shadow-md transition-all duration-300 transform hover:-translate-y-2">
                   <CardContent className="p-8 text-center">
@@ -86,9 +88,9 @@ export default function CallToAction() {
             <ScrollAnimation direction="fade" duration={0.8} delay={0.6}>
               <div className="mt-16">
                 <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-                  Don&apos;t let another day pass wondering &quot;what if&quot;. Take the first step
-                  towards your dream tech career today. Your future self will thank
-                  you.
+                  Don&apos;t let another day pass wondering &quot;what if&quot;.
+                  Take the first step towards your dream tech career today. Your
+                  future self will thank you.
                 </p>
               </div>
             </ScrollAnimation>

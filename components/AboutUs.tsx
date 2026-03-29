@@ -48,10 +48,7 @@ export default function AboutUs() {
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Empowering the Next Generation of
-              <span className="text-[#F09526]">
-                {" "}
-                Technologists
-              </span>
+              <span className="text-[#F09526]"> Technologists</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               TechRedy is more than just a learning platform—we&apos;re a

@@ -200,7 +200,7 @@ export default function InteractiveSkillBoard() {
         skillElements.length,
         "skills and",
         dropZoneElements.length,
-        "zones"
+        "zones",
       );
 
       // Clear any existing instances
@@ -222,7 +222,7 @@ export default function InteractiveSkillBoard() {
           duration: 0.6,
           stagger: 0.1,
           ease: "back.out(1.7)",
-        }
+        },
       );
 
       // Animate drop zones
@@ -236,7 +236,7 @@ export default function InteractiveSkillBoard() {
           stagger: 0.2,
           delay: 0.3,
           ease: "power2.out",
-        }
+        },
       );
 
       // Setup draggable functionality
@@ -353,7 +353,7 @@ export default function InteractiveSkillBoard() {
                     "Successfully dropping skill",
                     skillId,
                     "in zone",
-                    zoneId
+                    zoneId,
                   );
                   dropped = true;
 
@@ -379,7 +379,7 @@ export default function InteractiveSkillBoard() {
                         // Remove from other zones first
                         Object.keys(newState).forEach((key) => {
                           newState[key] = newState[key].filter(
-                            (id) => id !== skillId
+                            (id) => id !== skillId,
                           );
                         });
                         // Add to target zone
@@ -458,7 +458,7 @@ export default function InteractiveSkillBoard() {
 
     // Re-enable the skill card for dragging
     const skillElement = containerRef.current?.querySelector(
-      `[data-skill-id="${skillId}"]`
+      `[data-skill-id="${skillId}"]`,
     ) as HTMLElement;
     if (skillElement) {
       console.log("Re-enabling skill element:", skillId);
@@ -500,10 +500,7 @@ export default function InteractiveSkillBoard() {
   };
 
   return (
-    <section
-      className="py-20 bg-white"
-      suppressHydrationWarning
-    >
+    <section className="py-20 bg-white" suppressHydrationWarning>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <Badge className="mb-4 bg-[#F09526] text-white border-0">
@@ -511,10 +508,7 @@ export default function InteractiveSkillBoard() {
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Build Your Tech
-            <span className="text-[#F09526]">
-              {" "}
-              Skill Path
-            </span>
+            <span className="text-[#F09526]"> Skill Path</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Drag and drop skills to create your personalized learning journey

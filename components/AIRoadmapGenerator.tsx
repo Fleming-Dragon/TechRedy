@@ -138,7 +138,7 @@ class LearningPathAI {
 
     // Generate career path recommendations
     roadmapItems.push(
-      ...this.generateCareerPathSteps(suggestedPaths, allUserSkills)
+      ...this.generateCareerPathSteps(suggestedPaths, allUserSkills),
     );
 
     // Generate advanced learning opportunities
@@ -156,7 +156,7 @@ class LearningPathAI {
       distribution[category] = skills.filter((skill) =>
         this.skillCategories[
           category as keyof typeof this.skillCategories
-        ].includes(skill)
+        ].includes(skill),
       ).length;
     });
     return distribution;
@@ -167,7 +167,7 @@ class LearningPathAI {
 
     Object.entries(this.careerPaths).forEach(([path, requirements]) => {
       const matchingSkills = requirements.requiredSkills.filter((skill) =>
-        skills.includes(skill)
+        skills.includes(skill),
       );
       pathScores[path] =
         matchingSkills.length / requirements.requiredSkills.length;
@@ -180,7 +180,7 @@ class LearningPathAI {
   }
 
   private generateImmediateSteps(
-    currentSkills: string[]
+    currentSkills: string[],
     // masteredSkills: string[]
   ): RoadmapItem[] {
     const steps: RoadmapItem[] = [];
@@ -222,7 +222,7 @@ class LearningPathAI {
   }): RoadmapItem[] {
     const steps: RoadmapItem[] = [];
     const strongestCategory = Object.entries(distribution).sort(
-      ([, a], [, b]) => b - a
+      ([, a], [, b]) => b - a,
     )[0];
 
     if (strongestCategory && strongestCategory[1] >= 2) {
@@ -261,7 +261,7 @@ class LearningPathAI {
 
   private generateCareerPathSteps(
     suggestedPaths: string[],
-    currentSkills: string[]
+    currentSkills: string[],
   ): RoadmapItem[] {
     const steps: RoadmapItem[] = [];
 
@@ -383,7 +383,7 @@ AIRoadmapGeneratorProps) {
   const [roadmap, setRoadmap] = useState<RoadmapItem[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
   const [showDetails, setShowDetails] = useState<{ [key: string]: boolean }>(
-    {}
+    {},
   );
 
   const learningAI = new LearningPathAI();
@@ -449,7 +449,7 @@ AIRoadmapGeneratorProps) {
   };
 
   const hasSkillsToAnalyze = Object.values(droppedSkills).some(
-    (skills) => skills.length > 0
+    (skills) => skills.length > 0,
   );
 
   return (
@@ -462,10 +462,7 @@ AIRoadmapGeneratorProps) {
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Your Personalized
-            <span className="text-[#F09526]">
-              {" "}
-              Learning Roadmap
-            </span>
+            <span className="text-[#F09526]"> Learning Roadmap</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Our AI analyzes your skill selections to create a personalized
@@ -547,7 +544,7 @@ AIRoadmapGeneratorProps) {
                           <div className="flex flex-wrap gap-2">
                             <Badge
                               className={`${getPriorityColor(
-                                item.priority
+                                item.priority,
                               )} border`}
                             >
                               {item.priority} priority

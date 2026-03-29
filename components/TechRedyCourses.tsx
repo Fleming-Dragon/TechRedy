@@ -143,10 +143,7 @@ const TechRedyCourses: React.FC = () => {
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Transform Your
-            <span className="text-[#F09526]">
-              {" "}
-              Career Path
-            </span>
+            <span className="text-[#F09526]"> Career Path</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Join thousands of professionals who&apos;ve accelerated their
@@ -197,10 +194,10 @@ const TechRedyCourses: React.FC = () => {
                           course.type === "Featured"
                             ? "bg-[#F09526]/10 text-[#F09526]"
                             : course.type === "Popular"
-                            ? "bg-[#3665AA]/10 text-[#3665AA]"
-                            : course.type === "In-Demand"
-                            ? "bg-green-100 text-green-800"
-                            : "bg-[#F09526]/10 text-[#F09526]"
+                              ? "bg-[#3665AA]/10 text-[#3665AA]"
+                              : course.type === "In-Demand"
+                                ? "bg-green-100 text-green-800"
+                                : "bg-[#F09526]/10 text-[#F09526]"
                         }`}
                       >
                         {course.type}

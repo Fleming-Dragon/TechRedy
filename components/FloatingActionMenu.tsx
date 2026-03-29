@@ -78,7 +78,7 @@ export default function FloatingActionMenu() {
 
     const mainButton = mainButtonRef.current;
     const actionButtons = containerRef.current?.querySelectorAll(
-      ".floating-action-item"
+      ".floating-action-item",
     );
 
     if (!mainButton || !actionButtons) return;
@@ -112,7 +112,7 @@ export default function FloatingActionMenu() {
 
   const toggleMenu = () => {
     const actionButtons = containerRef.current?.querySelectorAll(
-      ".floating-action-item"
+      ".floating-action-item",
     );
     const mainButton = mainButtonRef.current;
 
@@ -146,7 +146,7 @@ export default function FloatingActionMenu() {
             duration: 0.4,
             ease: "back.out(1.7)",
           },
-          0.1 + index * 0.05
+          0.1 + index * 0.05,
         );
       });
 
@@ -159,7 +159,7 @@ export default function FloatingActionMenu() {
           duration: 0.3,
           stagger: 0.05,
         },
-        0.3
+        0.3,
       );
     } else {
       // Closing animation
@@ -182,7 +182,7 @@ export default function FloatingActionMenu() {
           ease: "back.in(1.7)",
           stagger: 0.03,
         },
-        0.1
+        0.1,
       );
 
       tl.to(
@@ -193,7 +193,7 @@ export default function FloatingActionMenu() {
           duration: 0.3,
           ease: "back.out(1.7)",
         },
-        0.2
+        0.2,
       );
     }
 
@@ -202,7 +202,7 @@ export default function FloatingActionMenu() {
 
   const handleActionClick = (action: FloatingAction) => {
     const actionButton = containerRef.current?.querySelector(
-      `[data-action-id="${action.id}"]`
+      `[data-action-id="${action.id}"]`,
     );
 
     if (actionButton) {
@@ -255,10 +255,10 @@ export default function FloatingActionMenu() {
 
   const handleActionHover = (actionId: string, isHovering: boolean) => {
     const actionButton = containerRef.current?.querySelector(
-      `[data-action-id="${actionId}"]`
+      `[data-action-id="${actionId}"]`,
     );
     const label = containerRef.current?.querySelector(
-      `[data-label-id="${actionId}"]`
+      `[data-label-id="${actionId}"]`,
     );
 
     if (!actionButton) return;
