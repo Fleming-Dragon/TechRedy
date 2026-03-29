@@ -29,7 +29,7 @@ export default function WhyChooseTechRedy() {
       description:
         "Access to premium quality courses, tutorials, and documentation without any cost barriers.",
       highlights: ["150+ Free Courses", "Updated Weekly", "Industry Standards"],
-      color: "blue",
+      color: "orange",
     },
     {
       icon: Users,
@@ -37,7 +37,7 @@ export default function WhyChooseTechRedy() {
       description:
         "Get guidance from experienced professionals working at top tech companies worldwide.",
       highlights: ["1-on-1 Mentoring", "Industry Experts", "Career Guidance"],
-      color: "teal",
+      color: "orange",
     },
     {
       icon: TrendingUp,
@@ -45,7 +45,7 @@ export default function WhyChooseTechRedy() {
       description:
         "Join thousands who have successfully transitioned to fulfilling tech careers through our platform.",
       highlights: ["85% Success Rate", "2500+ Alumni", "Real Results"],
-      color: "green",
+      color: "orange",
     },
     {
       icon: Laptop,
@@ -100,12 +100,12 @@ export default function WhyChooseTechRedy() {
 
   const getColorClass = (color: string) => {
     const colorMap = {
-      blue: "from-blue-500 to-blue-600",
+      blue: "from-[#3665AA] to-[#3665AA]",
       teal: "from-teal-500 to-teal-600",
       green: "from-green-500 to-green-600",
-      purple: "from-purple-500 to-purple-600",
-      orange: "from-orange-500 to-orange-600",
-      pink: "from-pink-500 to-pink-600",
+      purple: "from-[#F09526] to-[#F09526]",
+      orange: "from-[#F09526] to-[#F09526]",
+      pink: "from-[#F09526] to-[#F09526]",
     };
     return (
       colorMap[color as keyof typeof colorMap] || "from-gray-500 to-gray-600"
@@ -113,19 +113,16 @@ export default function WhyChooseTechRedy() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <ScrollAnimation direction="up" className="text-center mb-16">
-          <Badge className="mb-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0">
+          <Badge className="mb-4 bg-[#F09526] text-white border-0">
             Why Choose TechRedy?
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Your Gateway to
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              {" "}
-              Tech Success
-            </span>
+            <span className="text-[#F09526]"> Tech Success</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Discover what makes TechRedy the preferred choice for aspiring
@@ -143,7 +140,7 @@ export default function WhyChooseTechRedy() {
                   <CardHeader className="pb-4">
                     <div
                       className={`w-16 h-16 rounded-xl bg-gradient-to-br ${getColorClass(
-                        feature.color
+                        feature.color,
                       )} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
                     >
                       <feature.icon className="w-8 h-8 text-white" />
@@ -188,7 +185,7 @@ export default function WhyChooseTechRedy() {
                   key={index}
                   className="text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 bg-[#F09526] rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-2">
@@ -204,14 +201,14 @@ export default function WhyChooseTechRedy() {
         {/* Success Stories Section */}
         <ScrollAnimation
           direction="up"
-          className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white"
+          className="bg-[#3665AA] rounded-2xl p-8 md:p-12 text-white"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-bold mb-6">
                 Join Our Success Stories
               </h3>
-              <p className="text-blue-100 text-lg mb-6">
+              <p className="text-white/80 text-lg mb-6">
                 Every day, TechRedy members are landing their dream jobs,
                 starting their own companies, and making meaningful
                 contributions to the tech industry. Your success story could be
@@ -236,19 +233,19 @@ export default function WhyChooseTechRedy() {
             <div className="grid grid-cols-2 gap-6">
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">2500+</div>
-                <div className="text-blue-100">Success Stories</div>
+                <div className="text-white/80">Success Stories</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">500+</div>
-                <div className="text-blue-100">Partner Companies</div>
+                <div className="text-white/80">Partner Companies</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">150+</div>
-                <div className="text-blue-100">Countries Served</div>
+                <div className="text-white/80">Countries Served</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">24/7</div>
-                <div className="text-blue-100">Support Available</div>
+                <div className="text-white/80">Support Available</div>
               </div>
             </div>
           </div>
@@ -256,7 +253,7 @@ export default function WhyChooseTechRedy() {
           <div className="text-center mt-8">
             <Button
               size="lg"
-              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold"
+              className="bg-white text-[#3665AA] hover:bg-gray-100 px-8 py-4 text-lg font-semibold"
             >
               Start Your Success Story
               <ArrowRight className="w-5 h-5 ml-2" />

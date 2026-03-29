@@ -453,16 +453,16 @@ AIRoadmapGeneratorProps) {
   );
 
   return (
-    <section className="py-16 bg-gradient-to-br from-purple-50 to-indigo-50">
+    <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <Badge className="mb-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-white border-0">
+          <Badge className="mb-4 bg-[#F09526] text-white border-0">
             <Brain className="w-4 h-4 mr-2" />
             AI-Powered Learning
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Your Personalized
-            <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+            <span className="text-[#F09526]">
               {" "}
               Learning Roadmap
             </span>
@@ -474,8 +474,8 @@ AIRoadmapGeneratorProps) {
           </p>
 
           {!hasSkillsToAnalyze ? (
-            <div className="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-xl p-8 max-w-2xl mx-auto">
-              <Sparkles className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+            <div className="bg-[#F09526]/10 rounded-xl p-8 max-w-2xl mx-auto">
+              <Sparkles className="w-12 h-12 text-[#F09526] mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 Start Building Your Path
               </h3>
@@ -488,7 +488,7 @@ AIRoadmapGeneratorProps) {
             <Button
               onClick={generateRoadmap}
               disabled={isGenerating}
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 py-3 rounded-xl text-lg font-medium transition-all duration-300 hover:scale-105"
+              className="bg-[#F09526] hover:bg-[#F09526]/90 text-white px-8 py-3 rounded-xl text-lg font-medium transition-all duration-300 hover:scale-105"
             >
               {isGenerating ? (
                 <>
@@ -530,7 +530,7 @@ AIRoadmapGeneratorProps) {
                     <div className="flex items-start justify-between">
                       <div className="flex items-start space-x-4">
                         <div className="flex-shrink-0">
-                          <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center text-white font-bold text-lg">
+                          <div className="w-12 h-12 bg-[#F09526] rounded-xl flex items-center justify-center text-white font-bold text-lg">
                             {index + 1}
                           </div>
                         </div>
@@ -552,11 +552,11 @@ AIRoadmapGeneratorProps) {
                             >
                               {item.priority} priority
                             </Badge>
-                            <Badge className="bg-blue-100 text-blue-800 border border-blue-200">
+                            <Badge className="bg-[#3665AA]/10 text-[#3665AA] border border-[#3665AA]/20">
                               <Clock className="w-3 h-3 mr-1" />
                               {item.estimatedTime}
                             </Badge>
-                            <Badge className="bg-purple-100 text-purple-800 border border-purple-200">
+                            <Badge className="bg-[#F09526]/10 text-[#F09526] border border-[#F09526]/20">
                               {getDifficultyIcon(item.difficulty)}
                               <span className="ml-1">{item.difficulty}</span>
                             </Badge>
@@ -627,7 +627,7 @@ AIRoadmapGeneratorProps) {
                                   <h5 className="font-medium text-gray-900">
                                     {resource.title}
                                   </h5>
-                                  <Badge className="text-xs bg-indigo-100 text-indigo-800">
+                                  <Badge className="text-xs bg-[#F09526]/10 text-[#F09526]">
                                     {resource.estimatedHours}h
                                   </Badge>
                                 </div>
@@ -649,8 +649,8 @@ AIRoadmapGeneratorProps) {
             </div>
 
             <div className="text-center pt-8">
-              <div className="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-xl p-6 max-w-2xl mx-auto">
-                <Lightbulb className="w-8 h-8 text-purple-600 mx-auto mb-3" />
+              <div className="bg-[#F09526]/10 rounded-xl p-6 max-w-2xl mx-auto">
+                <Lightbulb className="w-8 h-8 text-[#F09526] mx-auto mb-3" />
                 <h4 className="font-semibold text-gray-900 mb-2">
                   Ready to Start Your Journey?
                 </h4>

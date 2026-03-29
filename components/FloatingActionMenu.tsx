@@ -33,7 +33,7 @@ export default function FloatingActionMenu() {
       id: "chat",
       icon: MessageSquare,
       label: "Live Chat",
-      color: "bg-blue-500 hover:bg-blue-600",
+      color: "bg-[#3665AA] hover:bg-[#3665AA]/90",
       action: () => console.log("Opening chat..."),
     },
     {
@@ -47,7 +47,7 @@ export default function FloatingActionMenu() {
       id: "email",
       icon: Mail,
       label: "Send Email",
-      color: "bg-purple-500 hover:bg-purple-600",
+      color: "bg-[#F09526] hover:bg-[#F09526]/90",
       action: () => console.log("Opening email..."),
     },
     {
@@ -337,7 +337,7 @@ export default function FloatingActionMenu() {
         onClick={toggleMenu}
         onMouseEnter={() => handleMainButtonHover(true)}
         onMouseLeave={() => handleMainButtonHover(false)}
-        className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
+        className="w-16 h-16 rounded-full bg-[#F09526] hover:bg-[#F09526]/90 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
       >
         {isOpen ? (
           <X className="w-6 h-6 text-white" />

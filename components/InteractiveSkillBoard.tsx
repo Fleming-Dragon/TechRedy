@@ -145,21 +145,21 @@ const dropZones: DropZone[] = [
     title: "Currently Learning",
     description: "Skills you want to focus on right now",
     acceptedCategories: ["frontend", "backend", "mobile", "ai", "security"],
-    color: "border-blue-300 bg-blue-50",
+    color: "border-[#3665AA]/40 bg-[#3665AA]/5",
   },
   {
     id: "mastered",
     title: "Mastered Skills",
     description: "Skills you have completed successfully",
     acceptedCategories: ["frontend", "backend", "mobile", "ai", "security"],
-    color: "border-green-300 bg-green-50",
+    color: "border-[#F09526]/40 bg-[#F09526]/5",
   },
   {
     id: "planning",
     title: "Future Goals",
     description: "Skills for your career roadmap",
     acceptedCategories: ["frontend", "backend", "mobile", "ai", "security"],
-    color: "border-purple-300 bg-purple-50",
+    color: "border-[#F09526]/50 bg-[#F09526]/10",
   },
 ];
 
@@ -273,8 +273,8 @@ export default function InteractiveSkillBoard() {
               gsap.to(zoneElement, {
                 scale: 1.03,
                 borderWidth: "4px",
-                borderColor: "#3b82f6",
-                backgroundColor: "rgba(59, 130, 246, 0.05)",
+                borderColor: "#F09526",
+                backgroundColor: "rgba(240, 149, 38, 0.08)",
                 duration: 0.3,
               });
             });
@@ -303,14 +303,14 @@ export default function InteractiveSkillBoard() {
               if (isHovering) {
                 // hovering = true;
                 gsap.to(zoneElement, {
-                  backgroundColor: "rgba(59, 130, 246, 0.15)",
-                  borderColor: "#1d4ed8",
+                  backgroundColor: "rgba(240, 149, 38, 0.2)",
+                  borderColor: "#D8831C",
                   duration: 0.2,
                 });
               } else {
                 gsap.to(zoneElement, {
-                  backgroundColor: "rgba(59, 130, 246, 0.05)",
-                  borderColor: "#3b82f6",
+                  backgroundColor: "rgba(240, 149, 38, 0.08)",
+                  borderColor: "#F09526",
                   duration: 0.2,
                 });
               }
@@ -489,11 +489,11 @@ export default function InteractiveSkillBoard() {
   const getLevelColor = (level: string) => {
     switch (level) {
       case "beginner":
-        return "bg-yellow-100 text-yellow-800";
+        return "bg-[#F09526]/10 text-[#F09526]";
       case "intermediate":
-        return "bg-blue-100 text-blue-800";
+        return "bg-[#3665AA]/10 text-[#3665AA]";
       case "advanced":
-        return "bg-purple-100 text-purple-800";
+        return "bg-[#F09526]/15 text-[#F09526]";
       default:
         return "bg-gray-100 text-gray-800";
     }
@@ -501,17 +501,17 @@ export default function InteractiveSkillBoard() {
 
   return (
     <section
-      className="py-20 bg-gradient-to-br from-gray-50 to-blue-50"
+      className="py-20 bg-white"
       suppressHydrationWarning
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <Badge className="mb-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white border-0">
+          <Badge className="mb-4 bg-[#F09526] text-white border-0">
             Interactive Learning
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Build Your Tech
-            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="text-[#F09526]">
               {" "}
               Skill Path
             </span>
@@ -527,7 +527,7 @@ export default function InteractiveSkillBoard() {
         <div ref={containerRef} className="space-y-12" suppressHydrationWarning>
           {!isMounted && (
             <div className="text-center py-8">
-              <div className="animate-spin w-8 h-8 border-2 border-purple-500 border-t-transparent rounded-full mx-auto mb-4"></div>
+              <div className="animate-spin w-8 h-8 border-2 border-[#F09526] border-t-transparent rounded-full mx-auto mb-4"></div>
               <p className="text-gray-600">Loading interactive features...</p>
             </div>
           )}
@@ -537,7 +537,7 @@ export default function InteractiveSkillBoard() {
               {/* Available Skills */}
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                  <Target className="w-6 h-6 mr-3 text-purple-600" />
+                  <Target className="w-6 h-6 mr-3 text-[#F09526]" />
                   Available Skills
                 </h3>
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">

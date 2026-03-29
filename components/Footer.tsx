@@ -76,7 +76,7 @@ export default function Footer() {
             className="lg:col-span-1"
           >
             <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mr-3">
+              <div className="w-12 h-12 bg-[#F09526] rounded-xl flex items-center justify-center mr-3">
                 <Code2 className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-2xl font-bold">TechRedy</h3>
@@ -162,7 +162,7 @@ export default function Footer() {
                   href={contact.href}
                   className="flex items-center text-gray-400 hover:text-white transition-colors duration-300 group"
                 >
-                  <div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center mr-3 group-hover:bg-blue-600 transition-colors duration-300">
+                  <div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center mr-3 group-hover:bg-[#3665AA] transition-colors duration-300">
                     <contact.icon className="w-4 h-4" />
                   </div>
                   <span>{contact.text}</span>
@@ -171,7 +171,7 @@ export default function Footer() {
             </div>
 
             <div className="mt-8">
-              <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white">
+              <Button className="w-full bg-[#F09526] hover:bg-[#F09526]/90 text-white">
                 <MessageSquare className="w-4 h-4 mr-2" />
                 Join Our Community
               </Button>
@@ -201,9 +201,9 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F09526] focus:border-transparent"
               />
-              <Button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-6 py-3">
+              <Button className="bg-[#F09526] hover:bg-[#F09526]/90 px-6 py-3">
                 Subscribe
               </Button>
             </div>

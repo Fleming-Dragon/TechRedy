@@ -35,7 +35,7 @@ const courses = [
     price: "₹45,000",
     originalPrice: "₹60,000",
     icon: Code,
-    color: "from-blue-500 to-cyan-500",
+    color: "from-[#3665AA] to-[#3665AA]",
     skills: ["React", "Node.js", "MongoDB", "Express"],
     highlights: ["Live Projects", "Job Assistance", "Industry Mentors"],
     rating: 4.9,
@@ -52,7 +52,7 @@ const courses = [
     price: "₹40,000",
     originalPrice: "₹55,000",
     icon: Database,
-    color: "from-purple-500 to-pink-500",
+    color: "from-[#F09526] to-[#F09526]",
     skills: ["Python", "Machine Learning", "Pandas", "TensorFlow"],
     highlights: ["Real Datasets", "Kaggle Projects", "Industry Case Studies"],
     rating: 4.8,
@@ -90,7 +90,7 @@ const courses = [
     price: "₹42,000",
     originalPrice: "₹58,000",
     icon: Smartphone,
-    color: "from-orange-500 to-red-500",
+    color: "from-[#F09526] to-[#F09526]",
     skills: ["React Native", "Flutter", "iOS", "Android"],
     highlights: ["App Store Deploy", "Real Apps", "UI/UX Focused"],
     rating: 4.8,
@@ -134,16 +134,16 @@ const benefits = [
 
 const TechRedyCourses: React.FC = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <ScrollAnimation direction="up" className="text-center mb-16">
-          <Badge className="mb-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0">
+          <Badge className="mb-4 bg-[#F09526] text-white border-0">
             TechRedy Courses
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Transform Your
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="text-[#F09526]">
               {" "}
               Career Path
             </span>
@@ -156,7 +156,7 @@ const TechRedyCourses: React.FC = () => {
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <div className="flex items-center text-gray-700">
-              <Monitor className="w-5 h-5 mr-2 text-blue-600" />
+              <Monitor className="w-5 h-5 mr-2 text-[#3665AA]" />
               Online Available
             </div>
             <div className="flex items-center text-gray-700">
@@ -164,7 +164,7 @@ const TechRedyCourses: React.FC = () => {
               Offline Available
             </div>
             <div className="flex items-center text-gray-700">
-              <Users className="w-5 h-5 mr-2 text-purple-600" />
+              <Users className="w-5 h-5 mr-2 text-[#F09526]" />
               Limited Seats
             </div>
           </div>
@@ -195,12 +195,12 @@ const TechRedyCourses: React.FC = () => {
                       <Badge
                         className={`${
                           course.type === "Featured"
-                            ? "bg-orange-100 text-orange-800"
+                            ? "bg-[#F09526]/10 text-[#F09526]"
                             : course.type === "Popular"
-                            ? "bg-blue-100 text-blue-800"
+                            ? "bg-[#3665AA]/10 text-[#3665AA]"
                             : course.type === "In-Demand"
                             ? "bg-green-100 text-green-800"
-                            : "bg-purple-100 text-purple-800"
+                            : "bg-[#F09526]/10 text-[#F09526]"
                         }`}
                       >
                         {course.type}
@@ -300,7 +300,7 @@ const TechRedyCourses: React.FC = () => {
                   key={index}
                   className="text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-[#F09526] rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-2">
@@ -315,11 +315,11 @@ const TechRedyCourses: React.FC = () => {
 
         {/* Call to Action */}
         <ScrollAnimation direction="up" duration={0.8} delay={0.6}>
-          <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white">
+          <div className="text-center bg-[#3665AA] rounded-2xl p-8 md:p-12 text-white">
             <h3 className="text-3xl font-bold mb-4">
               Ready to Start Learning?
             </h3>
-            <p className="text-blue-100 text-lg mb-6 max-w-2xl mx-auto">
+            <p className="text-white/80 text-lg mb-6 max-w-2xl mx-auto">
               Join over 10,000+ successful graduates who transformed their
               careers with TechRedy. Your journey to tech excellence starts
               here.
@@ -327,7 +327,7 @@ const TechRedyCourses: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold"
+                className="bg-white text-[#3665AA] hover:bg-gray-100 px-8 py-4 text-lg font-semibold"
               >
                 Explore All Courses
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -335,13 +335,13 @@ const TechRedyCourses: React.FC = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg font-semibold"
+                className="border-white text-white hover:bg-white hover:text-[#3665AA] px-8 py-4 text-lg font-semibold"
               >
                 <Calendar className="w-5 h-5 mr-2" />
                 Book Free Demo
               </Button>
             </div>
-            <div className="mt-6 text-blue-100 text-sm">
+            <div className="mt-6 text-white/80 text-sm">
               <p>📞 Call us: +91-8179191999 | 📧 Email: courses@techready.in</p>
             </div>
           </div>

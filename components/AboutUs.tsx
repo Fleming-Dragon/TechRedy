@@ -43,12 +43,12 @@ export default function AboutUs() {
         {/* Header */}
         <ScrollAnimation direction="up" duration={0.8}>
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-blue-100 text-blue-700 border-blue-200">
+            <Badge className="mb-4 bg-[#3665AA]/10 text-[#3665AA] border-[#3665AA]/20">
               About TechRedy
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Empowering the Next Generation of
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="text-[#F09526]">
                 {" "}
                 Technologists
               </span>
@@ -88,24 +88,24 @@ export default function AboutUs() {
                 </div>
               </div>
               <ScrollAnimation direction="scale" duration={0.8} delay={0.4}>
-                <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-8 text-white">
+                <div className="bg-[#3665AA] rounded-2xl p-8 text-white">
                   <h4 className="text-2xl font-bold mb-6">Our Impact</h4>
                   <div className="grid grid-cols-2 gap-6">
                     <div className="text-center">
                       <div className="text-3xl font-bold mb-2">2500+</div>
-                      <div className="text-blue-100">Community Members</div>
+                      <div className="text-white/80">Community Members</div>
                     </div>
                     <div className="text-center">
                       <div className="text-3xl font-bold mb-2">150+</div>
-                      <div className="text-blue-100">Free Resources</div>
+                      <div className="text-white/80">Free Resources</div>
                     </div>
                     <div className="text-center">
                       <div className="text-3xl font-bold mb-2">85%</div>
-                      <div className="text-blue-100">Success Rate</div>
+                      <div className="text-white/80">Success Rate</div>
                     </div>
                     <div className="text-center">
                       <div className="text-3xl font-bold mb-2">24/7</div>
-                      <div className="text-blue-100">Community Support</div>
+                      <div className="text-white/80">Community Support</div>
                     </div>
                   </div>
                 </div>
@@ -158,7 +158,7 @@ export default function AboutUs() {
 
         {/* Call to Action */}
         <ScrollAnimation direction="scale" duration={0.8} delay={0.6}>
-          <div className="text-center bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-12">
+          <div className="text-center bg-[#F09526]/5 rounded-2xl p-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
               Ready to Transform Your Career?
             </h3>
@@ -168,11 +168,11 @@ export default function AboutUs() {
               supportive community.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Badge className="bg-blue-100 text-blue-700 border-blue-200 px-4 py-2">
+              <Badge className="bg-[#3665AA]/10 text-[#3665AA] border-[#3665AA]/20 px-4 py-2">
                 <BookOpen className="w-4 h-4 mr-2" />
                 Continuous Learning
               </Badge>
-              <Badge className="bg-purple-100 text-purple-700 border-purple-200 px-4 py-2">
+              <Badge className="bg-[#F09526]/10 text-[#F09526] border-[#F09526]/20 px-4 py-2">
                 <Users className="w-4 h-4 mr-2" />
                 Global Community
               </Badge>

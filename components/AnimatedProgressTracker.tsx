@@ -45,7 +45,7 @@ const learningSteps: LearningStep[] = [
     completed: true,
     current: false,
     icon: BookOpen,
-    color: "from-green-400 to-green-600",
+    color: "from-[#3665AA] to-[#3665AA]",
     progress: 100,
   },
   {
@@ -56,7 +56,7 @@ const learningSteps: LearningStep[] = [
     completed: false,
     current: true,
     icon: Play,
-    color: "from-blue-400 to-blue-600",
+    color: "from-[#3665AA] to-[#3665AA]",
     progress: 65,
   },
   {
@@ -67,7 +67,7 @@ const learningSteps: LearningStep[] = [
     completed: false,
     current: false,
     icon: Clock,
-    color: "from-purple-400 to-purple-600",
+    color: "from-[#F09526] to-[#F09526]",
     progress: 0,
   },
   {
@@ -78,7 +78,7 @@ const learningSteps: LearningStep[] = [
     completed: false,
     current: false,
     icon: Target,
-    color: "from-orange-400 to-orange-600",
+    color: "from-[#F09526] to-[#F09526]",
     progress: 0,
   },
   {
@@ -89,7 +89,7 @@ const learningSteps: LearningStep[] = [
     completed: false,
     current: false,
     icon: Zap,
-    color: "from-pink-400 to-pink-600",
+    color: "from-[#F09526] to-[#F09526]",
     progress: 0,
   },
   {
@@ -100,7 +100,7 @@ const learningSteps: LearningStep[] = [
     completed: false,
     current: false,
     icon: Award,
-    color: "from-yellow-400 to-yellow-600",
+    color: "from-[#F09526] to-[#F09526]",
     progress: 0,
   },
 ];
@@ -143,7 +143,7 @@ export default function AnimatedProgressTracker() {
             toggleActions: "play none none reverse",
           },
           delay: index * 0.1,
-        }
+        },
       );
     });
 
@@ -161,7 +161,7 @@ export default function AnimatedProgressTracker() {
           end: "bottom 20%",
           toggleActions: "play none none reverse",
         },
-      }
+      },
     );
 
     // Cleanup
@@ -172,7 +172,7 @@ export default function AnimatedProgressTracker() {
 
   const handleStepClick = (stepIndex: number, stepId: string) => {
     const card = containerRef.current?.querySelector(
-      `[data-step-id="${stepId}"]`
+      `[data-step-id="${stepId}"]`,
     );
 
     if (card) {
@@ -196,7 +196,7 @@ export default function AnimatedProgressTracker() {
             duration: 1.5,
             ease: "power2.out",
             delay: 0.2,
-          }
+          },
         );
       }
     }
@@ -206,7 +206,7 @@ export default function AnimatedProgressTracker() {
 
   const handleStepHover = (stepId: string, isHovering: boolean) => {
     const card = containerRef.current?.querySelector(
-      `[data-step-id="${stepId}"]`
+      `[data-step-id="${stepId}"]`,
     );
 
     if (card) {
@@ -243,7 +243,7 @@ export default function AnimatedProgressTracker() {
       case "completed":
         return "text-green-600 bg-green-100";
       case "current":
-        return "text-blue-600 bg-blue-100";
+        return "text-[#3665AA] bg-[#3665AA]/10";
       case "upcoming":
         return "text-gray-600 bg-gray-100";
       default:
@@ -261,24 +261,21 @@ export default function AnimatedProgressTracker() {
     <section className="py-20 bg-white relative overflow-hidden">
       {/* Background Animation */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute top-20 left-20 w-96 h-96 bg-[#F09526] rounded-full blur-3xl animate-pulse-slow"></div>
         <div
-          className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full blur-3xl animate-pulse-slow"
+          className="absolute bottom-20 right-20 w-96 h-96 bg-[#3665AA] rounded-full blur-3xl animate-pulse-slow"
           style={{ animationDelay: "2s" }}
         ></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
-          <Badge className="mb-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white border-0">
+          <Badge className="mb-4 bg-[#F09526] text-white border-0">
             Your Learning Journey
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Track Your
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              {" "}
-              Progress
-            </span>
+            <span className="text-[#F09526]"> Progress</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Follow a structured learning path designed by industry experts. Each
@@ -291,7 +288,7 @@ export default function AnimatedProgressTracker() {
           {/* Timeline */}
           <div
             ref={timelineRef}
-            className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full"
+            className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-[#F09526] rounded-full"
             style={{ height: "calc(100% - 100px)", top: "50px" }}
           ></div>
 
@@ -314,7 +311,7 @@ export default function AnimatedProgressTracker() {
                   <div className={`w-5/12 ${isLeft ? "pr-8" : "pl-8"}`}>
                     <Card
                       className={`progress-card cursor-pointer transition-all duration-300 hover:shadow-xl ${
-                        activeStep === index ? "ring-2 ring-blue-500" : ""
+                        activeStep === index ? "ring-2 ring-[#F09526]" : ""
                       }`}
                       data-step-id={step.id}
                       onClick={() => handleStepClick(index, step.id)}
@@ -359,7 +356,7 @@ export default function AnimatedProgressTracker() {
                         </div>
 
                         {status === "current" && (
-                          <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700">
+                          <Button className="w-full bg-[#F09526] hover:bg-[#F09526]/90 text-white">
                             Continue Learning
                             <Play className="w-4 h-4 ml-2" />
                           </Button>
@@ -410,7 +407,7 @@ export default function AnimatedProgressTracker() {
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
           <Card className="text-center hover:shadow-lg transition-shadow duration-300">
             <CardContent className="p-6">
-              <TrendingUp className="w-12 h-12 text-blue-500 mx-auto mb-4" />
+              <TrendingUp className="w-12 h-12 text-[#3665AA] mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-gray-900 mb-2">
                 {learningSteps.filter((s) => s.completed).length}/
                 {learningSteps.length}
@@ -429,7 +426,7 @@ export default function AnimatedProgressTracker() {
 
           <Card className="text-center hover:shadow-lg transition-shadow duration-300">
             <CardContent className="p-6">
-              <Award className="w-12 h-12 text-purple-500 mx-auto mb-4" />
+              <Award className="w-12 h-12 text-[#F09526] mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-gray-900 mb-2">85%</h3>
               <p className="text-gray-600">Success Rate</p>
             </CardContent>
